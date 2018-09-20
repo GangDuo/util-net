@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Converter.cs" />
     <Compile Include="FileSystem.cs" />
+    <Compile Include="FormConsole.cs" />
     <Compile Include="MsExcel.cs" />
     <Compile Include="ProcessorInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
