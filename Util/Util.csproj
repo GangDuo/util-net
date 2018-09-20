@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chunk.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="FileSystem.cs" />
     <Compile Include="FormConsole.cs" />
