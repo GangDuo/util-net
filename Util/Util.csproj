@@ -49,6 +49,7 @@
     <Compile Include="FormConsole.cs" />
     <Compile Include="MsExcel.cs" />
     <Compile Include="ObjectShredder.cs" />
+    <Compile Include="Printer.cs" />
     <Compile Include="ProcessorInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
