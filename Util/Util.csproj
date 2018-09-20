@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converter.cs" />
     <Compile Include="FileSystem.cs" />
     <Compile Include="MsExcel.cs" />
     <Compile Include="ProcessorInfo.cs" />
