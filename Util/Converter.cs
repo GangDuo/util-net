@@ -8,18 +8,16 @@ using System.Text;
 
 namespace Util
 {
-    // http://kosukety.org/2011/06/27/generic-list-datatable-exchange/
     public class Converter
     {
         public static DataTable ToDataTable<T>(T list) where T : IList
         {
             var table = new DataTable(typeof(T).GetGenericArguments()[0].Name);
-            //special handling for value types and string
-            //typeof(T).GetGenericArguments()[0].IsValueType || 
-            if (typeof(T).GetGenericArguments()[0].Equals(typeof(string)))
+            if ((typeof(T).GetGenericArguments()[0].Equals(typeof(string)))
+                || (typeof(T).GetGenericArguments()[0].IsPrimitive))
             {
-
-                DataColumn dc = new DataColumn("Value");
+                var t = typeof(T).GetGenericArguments()[0];
+                DataColumn dc = new DataColumn("Value", t);
                 table.Columns.Add(dc);
                 foreach (var item in list)
                 {
@@ -49,7 +47,8 @@ namespace Util
             var list = new T();
             foreach (DataRow row in table.Rows)
             {
-                if (typeof(T).GetGenericArguments()[0].Equals(typeof(string)))
+                if ((typeof(T).GetGenericArguments()[0].Equals(typeof(string)))
+                    || (typeof(T).GetGenericArguments()[0].IsPrimitive))
                 {
                     list.Add(row[0]);
                 }
