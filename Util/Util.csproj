@@ -47,7 +47,6 @@
     <Compile Include="Converter.cs" />
     <Compile Include="FileSystem.cs" />
     <Compile Include="FormConsole.cs" />
-    <Compile Include="MsExcel.cs" />
     <Compile Include="Nullable.cs" />
     <Compile Include="ObjectShredder.cs" />
     <Compile Include="Printer.cs" />
